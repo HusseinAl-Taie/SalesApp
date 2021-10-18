@@ -1,0 +1,15 @@
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/bin/Debug/net5.0/TdpSalesApp.deps.json
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/bin/Debug/net5.0/TdpSalesApp.runtimeconfig.json
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/bin/Debug/net5.0/TdpSalesApp.runtimeconfig.dev.json
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/bin/Debug/net5.0/TdpSalesApp.dll
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/bin/Debug/net5.0/ref/TdpSalesApp.dll
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/bin/Debug/net5.0/TdpSalesApp.pdb
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.csproj.AssemblyReference.cache
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.AssemblyInfoInputs.cache
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.AssemblyInfo.cs
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.csproj.CoreCompileInputs.cache
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.dll
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/ref/TdpSalesApp.dll
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.pdb
+/Volumes/Me/WORK/NationWide/TDP/assesments /backend_sales/tdp_sales/tdp_sales/obj/Debug/net5.0/TdpSalesApp.genruntimeconfig.cache
