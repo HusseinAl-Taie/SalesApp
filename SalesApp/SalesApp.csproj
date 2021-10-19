@@ -11,6 +11,7 @@
     <None Remove="dev_src\Data\" />
     <None Remove="dev_src\Menus\" />
     <None Remove="dev_src\Services\" />
+    <None Remove="dev_src\Data\Model\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dev_src\" />
@@ -18,5 +19,6 @@
     <Folder Include="dev_src\Data\" />
     <Folder Include="dev_src\Menus\" />
     <Folder Include="dev_src\Services\" />
+    <Folder Include="dev_src\Data\Model\" />
   </ItemGroup>
 </Project>
