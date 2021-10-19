@@ -1,11 +1,21 @@
 ﻿using System;
+using SalesApp.dev_src.Controllers;
+
 namespace SalesApp
 {
 
 
     class SaleMenu
     {
-        private object menuOptions;
+        //sale controller initilised 
+        private readonly SaleController saleController;
+
+        //passing the controller through a class objct that must have salecontroller as parameter
+        public SaleMenu(SaleController saleController)
+        {
+            this.saleController = saleController;
+        }
+
 
         enum MenuOptions
         {
@@ -29,18 +39,21 @@ namespace SalesApp
         {
             //creating a bool in as a loop breaker
             bool inMenu = true;
-
             // the loop will run as long as in menu true
             while (inMenu)
             {
                 //clear screen
                 Console.Clear();
+
                 //show menu
                 PrintMenu();
+
                 //get input from user
                 string input = Console.ReadLine();
+
                 //convert input to enum menu options
                 bool b = Enum.TryParse(input, true,out MenuOptions menuOptions);
+
                 //valdiate the input 
                 if (b == false)
                 {
@@ -52,14 +65,18 @@ namespace SalesApp
                 switch (menuOptions)
                 {
                     case MenuOptions.CREATE:
-                        break;
-                    case MenuOptions.DELETE:
+                        saleController.CREATE();
                         break;
                     case MenuOptions.READ:
+                        saleController.READ();
+                        break;
+                    case MenuOptions.DELETE:
+                        saleController.DELETE();
                         break;
                     case MenuOptions.QUIT:
                         inMenu = false;
                         break;
+
                 }
 
             }
