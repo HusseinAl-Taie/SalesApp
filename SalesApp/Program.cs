@@ -1,4 +1,5 @@
 ﻿using System;
+using SalesApp.dev_src.Controllers;
 
 namespace SalesApp
 {
@@ -7,8 +8,10 @@ namespace SalesApp
         static void Main(string[] args)
         {
             Console.WriteLine("SalesApp dev!");
-            SaleMenu menu = new SaleMenu();
-                menu.PrintMenu();
+
+            //creating a sale menu giving it a sale constructor as defined
+            SaleMenu menu = new SaleMenu(new SaleController());
+            menu.InteractiveLoop();
 
 
         }

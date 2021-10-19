@@ -44,7 +44,6 @@ namespace SalesApp
             {
                 //clear screen
                 Console.Clear();
-
                 //show menu
                 PrintMenu();
 
