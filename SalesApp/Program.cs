@@ -7,6 +7,10 @@ namespace SalesApp
         static void Main(string[] args)
         {
             Console.WriteLine("SalesApp dev!");
+            SaleMenu menu = new SaleMenu();
+                menu.PrintMenu();
+
+
         }
     }
 }
