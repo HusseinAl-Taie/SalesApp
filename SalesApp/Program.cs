@@ -6,7 +6,7 @@ namespace SalesApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("SalesApp!");
+            Console.WriteLine("SalesApp dev!");
         }
     }
 }
