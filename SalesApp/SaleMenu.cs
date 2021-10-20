@@ -23,6 +23,12 @@ namespace SalesApp
             CREATE, READ, DELETE, QUIT
         }
 
+        enum AppMenuOptions
+        {
+            //using enum to represent the menu
+            DATAENTRY, REPORTS
+        }
+
         public void PrintMenu()
         {
             Array values = Enum.GetValues(typeof(MenuOptions));
@@ -31,6 +37,17 @@ namespace SalesApp
                 {
                     Console.WriteLine(value);
                 }
+            Console.WriteLine("===== ===== ======");
+        }
+
+        public void PrintAppMenu()
+        {
+            Array values = Enum.GetValues(typeof(AppMenuOptions));
+            Console.WriteLine("====App Menu ======");
+            foreach (var value in values)
+            {
+                Console.WriteLine(value);
+            }
             Console.WriteLine("===== ===== ======");
         }
 
@@ -75,9 +92,43 @@ namespace SalesApp
                     case MenuOptions.QUIT:
                         inMenu = false;
                         break;
+                    default:
+                        break;
 
                 }
 
+            }
+
+        }
+
+        public void AppMenuLoop()
+        {
+            bool inAppMenu = true;
+            while (inAppMenu)
+            {
+                Console.Clear();
+                PrintAppMenu();
+                string input = Console.ReadLine();
+
+                bool b = Enum.TryParse(input, true, out AppMenuOptions appMenuOptions);
+
+                if (b == false)
+                {
+                    Console.WriteLine("Invalid input");
+                    continue;
+                }
+                switch (appMenuOptions)
+                {
+                    case AppMenuOptions.DATAENTRY:
+                        inAppMenu = false;
+                        break;
+                 
+                    case AppMenuOptions.REPORTS:
+                        break;
+
+                    default:
+                        break;
+                }
             }
 
         }

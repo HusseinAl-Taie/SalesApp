@@ -7,10 +7,12 @@ namespace SalesApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("SalesApp dev!");
-
             //creating a sale menu giving it a sale constructor as defined
             SaleMenu menu = new SaleMenu(new SaleController());
+           
+            menu.AppMenuLoop();
+           
+
             menu.InteractiveLoop();
 
 

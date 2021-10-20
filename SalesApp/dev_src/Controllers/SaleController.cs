@@ -6,6 +6,8 @@ namespace SalesApp.dev_src.Controllers
 {
     public class SaleController
     {
+        //private readonly ItemService itemService;
+
         //counter for the ID count
         private static int counter = 0;
         private IList<Sale> sales;

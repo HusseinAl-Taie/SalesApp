@@ -9,6 +9,10 @@ namespace SalesApp.dev_src.Data.Model
 
         public int ID { get; set; }
         public string Name { get; set; }
+        //public char ProductName;
+        //public int Quantity;
+        //public int Price;
+        //public DateTime SaleDate;
 
 
         public override string ToString()
