@@ -21,4 +21,4 @@ namespace SalesApp.dev_src.Data.Model
             
         }
     }
-}
+} 

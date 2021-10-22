@@ -1,39 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using SalesApp.dev_src.Data.Model;
+using SalesApp.dev_src.Services;
 
 namespace SalesApp.dev_src.Controllers
 {
     public class SaleController
     {
-        //private readonly ItemService itemService;
-
-        //counter for the ID count
-        private static int counter = 0;
-        private IList<Sale> sales;
-
+        // service var
+        private readonly SaleService saleService;
         //a constructor to initislised the list
-        public SaleController()
+        public SaleController(SaleService saleService)
         {
-            sales = new List<Sale>();
+            this.saleService = saleService;
         }
 
         internal void CREATE()
         {
-            Sale sale = new Sale();
-            sale.ID = counter;
-            sale.Name = "TestSale";
+            Console.WriteLine("Insert Sale Name");
+            Console.Write(">");
+            string  saleName = Console.ReadLine();
 
-            //adding the sale item to the list
-            sales.Add(sale);
-            counter++;
+            Sale toCreate = new Sale() { Name = saleName };
 
 
+            Sale newSale = saleService.Create(toCreate);
+            Console.WriteLine($"New Sale Added: {newSale}");
+            Console.WriteLine("Press any key!");
+            Console.ReadKey();
         }
 
         internal void READ()
         {
-            foreach (var sale in sales)
+            IEnumerable<Sale> saleInDb = saleService.Read();
+
+            foreach (var sale in saleInDb)
             {
                 Console.WriteLine(sale);
             }
@@ -51,19 +52,8 @@ namespace SalesApp.dev_src.Controllers
 
             if (b)
             {
-                //loop though the list of ids in sales list incrementally 
-                for (int i=0;i< sales.Count; i++)
-                {
-                    // if the condition is met the sale will be removed
-                    if (sales[i].ID == id)
-                    {
-                        sales.RemoveAt(i);
-                        break;
-                    }
-                }
+                saleService.Delete(id);
             }
-
-
 
         }
     }
