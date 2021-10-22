@@ -1,48 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using SalesApp.dev_src.Data.Model;
+using SalesApp.dev_src.Data.Repositories;
 
 namespace SalesApp.dev_src.Services
 {
-    public class SaleService
+    class SaleService
     {
-        private IList<Sale> sales;
-        private static int counter = 0;
+        //sale repo declaration
+        private readonly SaleRepository saleRepository;
 
         //const to init the list above
-        public SaleService()
+        public SaleService(SaleRepository saleRepository)
         {
-            sales = new List<Sale>();
+            this.saleRepository = saleRepository;
         }
 
 
         internal Sale Create(Sale toCreate)
         {
-            toCreate.ID = counter;
-            counter++;
-            sales.Add(toCreate);
-            return toCreate;
+
+            Sale newSale = saleRepository.Create(toCreate);
+            return newSale;
         }
 
         internal IEnumerable<Sale> Read()
         {
-            return sales;
-
+            return saleRepository.Read();
         }
 
         internal void Delete(int id)
         {
+            saleRepository.Delete(id);
 
-            //loop though the list of ids in sales list incrementally 
-            for (int i = 0; i < sales.Count; i++)
-            {
-                // if the condition is met the sale will be removed
-                if (sales[i].ID == id)
-                {
-                    sales.RemoveAt(i);
-                    break;
-                }
-            }
         }
     }
 }

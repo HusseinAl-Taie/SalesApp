@@ -12,6 +12,7 @@
     <None Remove="dev_src\Menus\" />
     <None Remove="dev_src\Services\" />
     <None Remove="dev_src\Data\Model\" />
+    <None Remove="dev_src\Data\Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dev_src\" />
@@ -20,5 +21,6 @@
     <Folder Include="dev_src\Menus\" />
     <Folder Include="dev_src\Services\" />
     <Folder Include="dev_src\Data\Model\" />
+    <Folder Include="dev_src\Data\Repositories\" />
   </ItemGroup>
 </Project>
