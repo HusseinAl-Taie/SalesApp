@@ -5,10 +5,11 @@ using SalesApp.dev_src.Services;
 
 namespace SalesApp.dev_src.Controllers
 {
-    public class SaleController
+    class SaleController
     {
         // service var
         private readonly SaleService saleService;
+
         //a constructor to initislised the list
         public SaleController(SaleService saleService)
         {

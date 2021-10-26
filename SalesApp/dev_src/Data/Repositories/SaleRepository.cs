@@ -4,11 +4,18 @@ using SalesApp.dev_src.Data.Model;
 
 namespace SalesApp.dev_src.Data.Repositories
 {
+
     internal class SaleRepository
     {
-        internal Sale Create()
+        private IList<Sale> sales;
+        private static int counter = 0;
+
+        internal Sale Create(Sale toCreate)
         {
-            throw new NotImplementedException();
+            toCreate.ID = counter;
+            counter++;
+            sales.Add(toCreate);
+            return toCreate;
         }
 
         internal IEnumerable<Sale> Read()

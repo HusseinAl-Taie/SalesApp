@@ -7,7 +7,7 @@ namespace SalesApp.dev_src.Services
 {
     class SaleService
     {
-        //sale repo declaration
+        //sale repo declaration 
         private readonly SaleRepository saleRepository;
 
         //const to init the list above
