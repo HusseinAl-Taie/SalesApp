@@ -15,9 +15,9 @@ namespace SalesApp.dev_src.utils
                 Port = 3306, // port to connect on, 3306 is default for MySQL
                 Database = "sale", // name of db to connect to in rdbms
                 AllowBatch = true, // allows batches of commands to be sent, defaults to true,
-                AllowLoadLocalInfileInPath = "./", // only files in specified dir can be uploaded, AllowLoadLocalInfile will override if set to true
-                AllowLoadLocalInfile = false, // allows file uploads from anywhere if set to true
-                ConnectionTimeout = 30 // default is 15, amount of time until app throws a timeout error
+                //AllowLoadLocalInfileInPath = "./", // only files in specified dir can be uploaded, AllowLoadLocalInfile will override if set to true
+                //AllowLoadLocalInfile = false, // allows file uploads from anywhere if set to true
+                //ConnectionTimeout = 30 // default is 15, amount of time until app throws a timeout error
         };
 
         public static MySqlConnection GetConnection()

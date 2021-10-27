@@ -17,6 +17,8 @@
     <None Remove="Newtonsoft.Json" />
     <None Remove="MySql.Data" />
     <None Remove="dev_src\Data\utils\" />
+    <None Remove="static\" />
+    <None Remove="static\schema.sql" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dev_src\" />
@@ -27,9 +29,15 @@
     <Folder Include="dev_src\Data\Model\" />
     <Folder Include="dev_src\Data\Repositories\" />
     <Folder Include="dev_src\Data\utils\" />
+    <Folder Include="static\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="MySql.Data" Version="8.0.27" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\schema.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
