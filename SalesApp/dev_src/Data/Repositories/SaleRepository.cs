@@ -1,31 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using SalesApp.dev_src.Data.Model;
+using SalesApp.dev_src.Data.Repositories;
+
 
 namespace SalesApp.dev_src.Data.Repositories
 {
 
-    internal class SaleRepository
+    internal class SaleRepository : ICrdRepository<Sale, int>
     {
         private IList<Sale> sales;
         private static int counter = 0;
 
-        internal Sale Create(Sale toCreate)
+        public SaleRepository()
+        {
+            sales = new List<Sale>();
+        }
+
+        public Sale Create(Sale toCreate)
         {
             toCreate.ID = counter;
             counter++;
             sales.Add(toCreate);
+
             return toCreate;
         }
 
-        internal IEnumerable<Sale> Read()
+        public IList<Sale> Read()
         {
-            throw new NotImplementedException();
+            return sales;
         }
 
-        internal void Delete(int id)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < sales.Count; i++)
+            {
+                if (sales[i].ID == id)
+                {
+                    sales.RemoveAt(i);
+                    break;
+                }
+            }
         }
     }
 }
