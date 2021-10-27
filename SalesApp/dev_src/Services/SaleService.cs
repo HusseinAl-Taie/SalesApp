@@ -10,7 +10,7 @@ namespace SalesApp.dev_src.Services
         //sale repo declaration 
         private readonly SaleRepository saleRepository;
 
-        //const to init the list above
+        //const to init the repo
         public SaleService(SaleRepository saleRepository)
         {
             this.saleRepository = saleRepository;

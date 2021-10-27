@@ -10,6 +10,11 @@ namespace SalesApp.dev_src.Data.Repositories
         private IList<Sale> sales;
         private static int counter = 0;
 
+        //initilising the list
+        public SaleRepository(){
+            sales = new List<Sale>();
+        }
+
         internal Sale Create(Sale toCreate)
         {
             toCreate.ID = counter;
