@@ -13,6 +13,9 @@
     <None Remove="dev_src\Services\" />
     <None Remove="dev_src\Data\Model\" />
     <None Remove="dev_src\Data\Repositories\" />
+    <None Remove="NuGet.PackageManagement" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="MySql.Data" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dev_src\" />
@@ -22,5 +25,9 @@
     <Folder Include="dev_src\Services\" />
     <Folder Include="dev_src\Data\Model\" />
     <Folder Include="dev_src\Data\Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.27" />
   </ItemGroup>
 </Project>
