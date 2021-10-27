@@ -16,15 +16,17 @@
     <None Remove="NuGet.PackageManagement" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="MySql.Data" />
+    <None Remove="dev_src\Data\utils\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dev_src\" />
     <Folder Include="dev_src\Controllers\" />
     <Folder Include="dev_src\Data\" />
-    <Folder Include="dev_src\Menus\" />
+    <Folder Include="dev_src\menus\" />
     <Folder Include="dev_src\Services\" />
     <Folder Include="dev_src\Data\Model\" />
     <Folder Include="dev_src\Data\Repositories\" />
+    <Folder Include="dev_src\Data\utils\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
