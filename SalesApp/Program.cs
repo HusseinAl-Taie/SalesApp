@@ -16,25 +16,25 @@ namespace SalesApp
             SaleMenu saleMenu = new SaleMenu(
                 new SaleController(
                     new SaleService(
-                        new SaleRepository())));
+                        new SaleRepository(MySqlUtils.GetConnection()))));
 
             saleMenu.AppMenuLoop();
             saleMenu.InteractiveLoop();
 
-            MySqlConnection connection = MySqlUtils.GetConnection();
+//            MySqlConnection connection = MySqlUtils.GetConnection();
 
-            //opening the connection
-            connection.Open();
+//            //opening the connection
+//            connection.Open();
 
-            bool connectionOpen = connection.Ping();
+//            bool connectionOpen = connection.Ping();
 
-            MySqlUtils.RunSchema(Environment.CurrentDirectory + @"/static/schema.sql", connection);
+//            MySqlUtils.RunSchema(Environment.CurrentDirectory + @"/static/schema.sql", connection);
 
-            Console.WriteLine($@"Connection status:{ connection.State}
-Ping Succesful: { connectionOpen}");
+//            Console.WriteLine($@"Connection status:{ connection.State}
+//Ping Succesful: { connectionOpen}");
 
-            //closing connection
-            connection.Dispose();
+//            //closing connection
+//            connection.Dispose();
         }
     }
 }

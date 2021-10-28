@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using MySql.Data.MySqlClient;
 using SalesApp.dev_src.Data.Model;
 using SalesApp.dev_src.Data.Repositories;
 
@@ -9,38 +10,39 @@ namespace SalesApp.dev_src.Data.Repositories
 
     internal class SaleRepository : ICrdRepository<Sale, int>
     {
-        private IList<Sale> sales;
-        private static int counter = 0;
+        private readonly MySqlConnection connection;
 
-        public SaleRepository()
+        public SaleRepository(MySqlConnection mySqlConnection)
         {
-            sales = new List<Sale>();
+            connection = mySqlConnection;
         }
 
         public Sale Create(Sale toCreate)
         {
-            toCreate.ID = counter;
-            counter++;
-            sales.Add(toCreate);
+            connection.Open();
+            MySqlCommand command = connection.CreateCommand();
+            command.CommandText = $"INSERT INTO sale(saleName, productName, quantity ) VALUES('{toCreate.Name}', '{toCreate.ProductName}', '{toCreate.Quantity}')";
 
-            return toCreate;
+            command.ExecuteNonQuery();
+            connection.Close();
+
+            Sale sale = new Sale();
+            sale.ID = (int)command.LastInsertedId;
+            sale.Name = toCreate.Name;
+            sale.ProductName = toCreate.ProductName;
+            sale.Quantity = toCreate.Quantity;
+
+
+            return sale;
         }
 
         public IList<Sale> Read()
         {
-            return sales;
+            return null;
         }
 
         public void Delete(int id)
         {
-            for (int i = 0; i < sales.Count; i++)
-            {
-                if (sales[i].ID == id)
-                {
-                    sales.RemoveAt(i);
-                    break;
-                }
-            }
         }
     }
 }
