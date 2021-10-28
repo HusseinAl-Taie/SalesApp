@@ -28,14 +28,16 @@ namespace SalesApp.dev_src.Controllers
             Console.Write(">");
             string productName = Console.ReadLine();
 
-            Console.WriteLine("Insert Quantity");
-            Console.Write(">");
-            var quantity = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Insert Quantity");
+            //Console.Write(">");
+            //int quantity = Convert.ToInt32(Console.ReadLine());
 
 
             Sale newSale = saleService.Create(toCreate);
 
-            Console.WriteLine($"New Sale Added: {newSale}{productName}{quantity}");
+            Console.WriteLine($"New Sale Added: {newSale}{productName}"
+                //+$"{quantity}"
+                );
             Console.WriteLine("Press any key!");
             Console.ReadKey();
         }
@@ -43,6 +45,7 @@ namespace SalesApp.dev_src.Controllers
         internal void READ()
         {
             IEnumerable<Sale> saleInDb = saleService.Read();
+
 
             foreach (var sale in saleInDb)
             {
