@@ -42,3 +42,5 @@ o	Reports
     o	Total Sales by Year and Month (e.g. The total amount of sales for January of 2021)
     -	MySQL queries are required for each of the Reports options, your program will run these against
      the database and retrieve the data to build the relevant report for the end user.
+
+Last know good commit:  5f5b5579d3abf53e4f9057caf27e461e97f1418f
