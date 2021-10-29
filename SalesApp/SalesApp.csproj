@@ -13,14 +13,31 @@
     <None Remove="dev_src\Services\" />
     <None Remove="dev_src\Data\Model\" />
     <None Remove="dev_src\Data\Repositories\" />
+    <None Remove="NuGet.PackageManagement" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="MySql.Data" />
+    <None Remove="dev_src\Data\utils\" />
+    <None Remove="static\" />
+    <None Remove="static\schema.sql" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dev_src\" />
     <Folder Include="dev_src\Controllers\" />
     <Folder Include="dev_src\Data\" />
-    <Folder Include="dev_src\Menus\" />
+    <Folder Include="dev_src\menus\" />
     <Folder Include="dev_src\Services\" />
     <Folder Include="dev_src\Data\Model\" />
     <Folder Include="dev_src\Data\Repositories\" />
+    <Folder Include="dev_src\Data\utils\" />
+    <Folder Include="static\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.27" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\schema.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ namespace SalesApp.dev_src.Data.Model
 
         public int ID { get; set; }
         public string Name { get; set; }
-        //public char ProductName;
+        public string ProductName { get; set; }
         //public int Quantity;
         //public int Price;
         //public DateTime SaleDate;
@@ -17,7 +17,8 @@ namespace SalesApp.dev_src.Data.Model
 
         public override string ToString()
         {
-            return $"Sale[ID ={ ID},  Name ={Name}]";
+            return $"Sale[ID ={ID}, Sale Name = { Name} | Product Name ={ProductName}";//, Quantity= {Quantity}]"
+            
             
         }
     }
