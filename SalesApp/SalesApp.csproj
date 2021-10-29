@@ -24,7 +24,6 @@
     <Folder Include="dev_src\" />
     <Folder Include="dev_src\Controllers\" />
     <Folder Include="dev_src\Data\" />
-    <Folder Include="dev_src\menus\" />
     <Folder Include="dev_src\Services\" />
     <Folder Include="dev_src\Data\Model\" />
     <Folder Include="dev_src\Data\Repositories\" />
